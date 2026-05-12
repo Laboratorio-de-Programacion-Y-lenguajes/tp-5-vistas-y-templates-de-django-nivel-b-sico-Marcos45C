@@ -5,4 +5,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     # TODO: Incluir las rutas de la app publicaciones usando include()
     # Pista: path("", include("publicaciones.urls")),
+    ##mi codigo
+    path("", include("publicaciones.urls")),
 ]

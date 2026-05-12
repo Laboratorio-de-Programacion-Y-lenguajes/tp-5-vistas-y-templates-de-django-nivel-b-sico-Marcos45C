@@ -57,3 +57,26 @@ from .models import Publicacion
 #       model = ...
 #       context_object_name = "..."
 #       pk_url_kwarg = "..."
+
+##mi codigo
+class InicioView(TemplateView):
+    template_name = "publicaciones/inicio.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        context["titulo"] = "Portal de publicaciones"
+        context["mensaje"] = "Bienvenido/a al sitio"
+
+        return context
+
+
+class PublicacionListView(ListView):
+    model = Publicacion
+    context_object_name = "publicacion_list"
+
+
+class PublicacionDetailView(DetailView):
+    model = Publicacion
+    context_object_name = "publicacion"
+    pk_url_kwarg = "publicacion_id"
