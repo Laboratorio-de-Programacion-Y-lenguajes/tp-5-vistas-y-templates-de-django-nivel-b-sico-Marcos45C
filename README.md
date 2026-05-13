@@ -98,6 +98,11 @@ pip install -r requirements.txt
 ```bash
 python manage.py migrate
 ```
+###  Enlazar el js
+
+```bash
+python manage.py loaddata ferias.json
+```
 
 ### 5. Ejecutá el servidor
 
